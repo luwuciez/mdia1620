@@ -1,6 +1,8 @@
 # MDIA 1620 Repository
 
-**Name:** Lucie Zhong
+Name
+----------
+Lucie Zhong
 
 Favourite sandwich
 ----------
