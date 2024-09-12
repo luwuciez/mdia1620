@@ -9,7 +9,7 @@
 Things that are still unclear
 ----------
 1. What breed are Sonja's dogs?
-2. What is the plastic bit that holds the bread bag closed called?
+2. What is the plastic clip that holds the bread bag closed called?
 
 One word for how you're feeling
 ----------
