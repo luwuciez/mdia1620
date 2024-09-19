@@ -23,6 +23,3 @@ Things that are still unclear
 One word for how you're feeling
 ----------
 **Entertained** :joy:
-
-----------
-Week 3 git push
