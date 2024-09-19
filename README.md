@@ -17,9 +17,9 @@ Favourite sandwich
 
 Things that are still unclear
 ----------
-1. What breed are Sonja's dogs? ➡️ They are a toy Australian Shepherd and a miniature Australian Shepherd
-2. What is the plastic clip that holds the bread bag closed called? ➡️ It's called a bag clip
+1. What happens if changes are made both locally and in origin/main?
+2. What's the difference between git pull, git merge, and git rebase?
 
 One word for how you're feeling
 ----------
-**Entertained** :joy:
+**Tired**
