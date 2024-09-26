@@ -14,3 +14,11 @@ let isHorseInStable = true;
 if (isHorseInStable==true) {
     console.log(horseName + " is in the stable right now.");
 }
+
+const STABLE_MONTHLY_FEE = 50;
+const MONTHLY_INCOME = 120;
+
+let monthlyNetIncome = MONTHLY_INCOME - STABLE_MONTHLY_FEE;
+let spendingIntroduction = `I make $${MONTHLY_INCOME} each month, and spend $${STABLE_MONTHLY_FEE} to board ${horseName}. My monthly net income is $${monthlyNetIncome}.`;
+
+console.log(spendingIntroduction);
