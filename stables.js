@@ -8,13 +8,6 @@ console.log(`Sometimes ${horseName} is a little dumb, so I like to call him ${ho
 let horseAge = 7;
 console.log(`${horseNickName} is ${horseAge} years old.`);
 
-let isHorseInStable = true;
-if (isHorseInStable==true) {
-    console.log(`${horseNickName} is in the stable right now.`);
-} else {
-    console.log(`${horseNickName} is outside the stable right now.`);
-}
-
 const STABLE_MONTHLY_FEE = 50;
 const MONTHLY_INCOME = 120;
 
@@ -27,3 +20,25 @@ const DISCOUNT = 10;
 let threeMonthFee = STABLE_MONTHLY_FEE * 3;
 let savings = threeMonthFee * Number(DISCOUNT/100);
 console.log(`After getting a ${DISCOUNT}% discount, I can save $${savings} for a 3-month stay at the stable.`);
+
+
+// Lesson 6
+let horseOne = [horseName, horseNickName, horseAge];
+let horseTwo = ["Steve", "Blue", 3];
+let horseThree = ["Miku", "Diva", 9];
+
+horseOne.push("brown");
+horseTwo.push("gold");
+horseThree.push("teal");
+
+let stable = [horseOne, horseThree];
+let outside = [horseTwo];
+
+
+console.log("Letting the horses out to play...");
+while (stable.length > 0) {
+    outside.push(stable.pop());
+}
+
+console.log("There are now " + outside.length + " horses outside.");
+console.log(outside);
