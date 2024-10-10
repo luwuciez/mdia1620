@@ -11,6 +11,8 @@ console.log(`${horseNickName} is ${horseAge} years old.`);
 let isHorseInStable = true;
 if (isHorseInStable==true) {
     console.log(`${horseNickName} is in the stable right now.`);
+} else {
+    console.log(`${horseNickName} is outside the stable right now.`);
 }
 
 const STABLE_MONTHLY_FEE = 50;
