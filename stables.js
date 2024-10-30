@@ -1,17 +1,6 @@
-console.log("I have a horse.");
-
 let horseName = "David";
 let horseNickName = "Dummy";
-console.log(`The name of my horse is ${horseName}.`);
-console.log(`Sometimes ${horseName} is a little dumb, so I like to call him ${horseNickName}.`); // He's still a good boy though :)
-
 let horseAge = 7;
-console.log(`${horseNickName} is ${horseAge} years old.`);
-
-let isHorseInStable = true;
-if (isHorseInStable==true) {
-    console.log(`${horseNickName} is in the stable right now.`);
-}
 
 const STABLE_MONTHLY_FEE = 50;
 const MONTHLY_INCOME = 120;
@@ -25,3 +14,30 @@ const DISCOUNT = 10;
 let threeMonthFee = STABLE_MONTHLY_FEE * 3;
 let savings = threeMonthFee * Number(DISCOUNT/100);
 console.log(`After getting a ${DISCOUNT}% discount, I can save $${savings} for a 3-month stay at the stable.`);
+
+
+// Lesson 6
+let myHorses = [
+    [horseName, horseNickName, horseAge, "brown", true], 
+    ["Steve", "Blue", 3, "spotted", false],
+    ["Miku", "Diva", 9, "teal", true]
+];
+
+// intro to horses
+// whether horses are inside or outside
+console.log(`I have ${myHorses.length} horses`);
+
+myHorses.forEach((horse) => {
+
+    let horseIntroduction = "";
+    
+    horseIntroduction = horseIntroduction.concat(`${horse[0]}'s nickname is ${horse[1]}, they're a ${horse[2]} year-old ${horse[3]} horse;`);
+    
+    if (horse[4]) {
+        horseIntroduction = horseIntroduction.concat(` ${horse[1]} is inside the stable right now.`);
+    } else {
+        horseIntroduction = horseIntroduction.concat(` ${horse[1]} is outside playing right now.`);
+    }
+
+    console.log(horseIntroduction);
+});

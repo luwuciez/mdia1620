@@ -11,15 +11,16 @@ Favourite sandwich
 
 3 Things I learned
 ----------
-1. Things in quotation marks are strings.
-2. Always use camel case for names, no dashes or underscores.
-3. Boolean values are either true or false.
+1. Arrays in javascript are initialized using square brackets.
+2. Elements can be pushed to and popped from an array.
+3. The "=>" in a function means there's no need for a return statement. Kind of like void in Java functions.
 
-2 Things I'm still unclear about
+3 Things I'm still unclear about
 ----------
-1. What happens if changes are made both locally and in origin/main?
-2. What's the difference between git pull, git merge, and git rebase?
+1. If I have an array of arrays, how would I access the values in the inner array?
+2. If I want to access a specific element in the array (not the first nor last element), how would I do it?
+3. No more questions, everything in the lesson was very clear to me.
 
-One word for how you're feeling
+Analogy
 ----------
-**Tired**
+I've always found the analogy of stacks of pancakes and lineups/queues to be helpful for understanding arrays.
