@@ -1,43 +1,44 @@
-let horseName = "David";
-let horseNickName = "Dummy";
-let horseAge = 7;
+function Horse(name, nickname, coat, favFood, personality) {
+    this.name = name;
+    this.nickname = nickname;
+    this.age = Math.floor(Math.random() * 11);
+    this.coat = coat;
+    this.favFood = favFood;
+    this.personality = personality;
+    this.isInside = true;
+    this.isHungry = true;
+    this.introduction = function () {
+        console.log(
+            `This is ${this.name}, a ${this.age} year-old ${this.coat} horse.`
+        );
+    };
+    this.goOutiside = function () {
+        if (this.isInside) {
+            this.isInside = false;
+            console.log(`${this.name} is now outside.`);
+        } else {
+            console.log(`${this.name} is already outside!`);
+        }
+    };
+    this.feed = function (food) {
+        if (this.isHungry && food === this.favFood) {
+            this.isHungry = false;
+            console.log(`${this.name} loves ${food} so much they ate it all.`);
+        } else {
+            console.log(`${this.name} isn't really hungry right now...`);
+        }
+    };
+}
 
-const STABLE_MONTHLY_FEE = 50;
-const MONTHLY_INCOME = 120;
+const steve = new Horse("Steve", "Dummy", "brown", "apples", "demure");
+const miku = new Horse("Miku", "Diva", "turquoise", "leek", "gentle");
+const zelda = new Horse("Zelda", "Princess", "gold", "fruitcake", "brave");
 
-let monthlyNetIncome = MONTHLY_INCOME - STABLE_MONTHLY_FEE;
-let spendingIntroduction = `I make $${MONTHLY_INCOME} each month, and spend $${STABLE_MONTHLY_FEE} to board ${horseNickName}. So My monthly net income is $${monthlyNetIncome}.`;
+function getHorseName(horse, key) {
+    console.log(`This horse is ${key}d ${horse[key]}.`); // bracket notation (dynamic access)
+}
 
-console.log(spendingIntroduction);
+getHorseName(steve, "nickname");
 
-const DISCOUNT = 10;
-let threeMonthFee = STABLE_MONTHLY_FEE * 3;
-let savings = threeMonthFee * Number(DISCOUNT/100);
-console.log(`After getting a ${DISCOUNT}% discount, I can save $${savings} for a 3-month stay at the stable.`);
-
-
-// Lesson 6
-let myHorses = [
-    [horseName, horseNickName, horseAge, "brown", true], 
-    ["Steve", "Blue", 3, "spotted", false],
-    ["Miku", "Diva", 9, "teal", true]
-];
-
-// intro to horses
-// whether horses are inside or outside
-console.log(`I have ${myHorses.length} horses`);
-
-myHorses.forEach((horse) => {
-
-    let horseIntroduction = "";
-    
-    horseIntroduction = horseIntroduction.concat(`${horse[0]}'s nickname is ${horse[1]}, they're a ${horse[2]} year-old ${horse[3]} horse;`);
-    
-    if (horse[4]) {
-        horseIntroduction = horseIntroduction.concat(` ${horse[1]} is inside the stable right now.`);
-    } else {
-        horseIntroduction = horseIntroduction.concat(` ${horse[1]} is outside playing right now.`);
-    }
-
-    console.log(horseIntroduction);
-});
+miku.feed("orange");
+miku.feed("leek");
