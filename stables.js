@@ -73,8 +73,8 @@
 //------------------------- Setting up shop -------------------------//
 
 let horses = [];
-let welcomeMsg = "Welcome to Star Rail Stables!";
-let latePenalty = 0.1;
+const WELCOME_MSG = "Welcome to Star Rail Stables!";
+const LATE_PENALTY = 0.1; // 10% late fee applied to rent if paid late
 let stallsAvail = 8;
 
 //------------------------- First day -------------------------//
@@ -251,7 +251,7 @@ if (stallsAvail < 2) {
 
 // Log late fees owed by a given horse
 function lateFeeOwed(horse) {
-    let lateFee = horse.rent * latePenalty;
+    let lateFee = horse.rent * LATE_PENALTY;
     console.log(
         `${horse.nickname} owes an extra $${lateFee} if rent is paid late.`
     );
