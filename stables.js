@@ -142,6 +142,7 @@ let topaz = new Horse(
     "cheerful"
 );
 
+// Add horses to stable
 horses.push(ratio);
 horses.push(aventurine);
 horses.push(topaz);
@@ -167,8 +168,10 @@ let jade = {
     },
 };
 
+// Add new horse to stable
 horses.push(jade);
 
+// Add new horse property isHungry
 for (let i = 0; i < horses.length; i++) {
     horses[i].isHungry = true;
 }
@@ -232,6 +235,7 @@ for (let i = 0; i < horses.length; i++) {
 
 //---------------------- Growing business ----------------------//
 
+// Update number of available stalls
 stallsAvail = stallsAvail - horses.length;
 
 if (stallsAvail < 2) {
@@ -240,6 +244,7 @@ if (stallsAvail < 2) {
     console.log(`We have ${stallsAvail} stall(s) available! 😎`);
 }
 
+// Log late fees owed by a given horse
 function lateFeeOwed(horse) {
     let lateFee = horse.rent * latePenalty;
     console.log(
@@ -248,6 +253,7 @@ function lateFeeOwed(horse) {
 }
 lateFeeOwed(horses[0]);
 
+// Find horse that likes a given treat
 function checkFavTreat(treat) {
     for (let i = 0; i < horses.length; i++) {
         if (horses[i].favTreat === treat) {
@@ -270,6 +276,7 @@ console.log(`${horses[1].name}'s nickname is ${getNickname(horses[1])}.`);
 
 //------------------------- Day to day operations -------------------------//
 
+// Pet horse based on their personality
 function petHorse(horse) {
     if (horse.personality === "cynical") {
         console.log(
@@ -286,6 +293,7 @@ function petHorse(horse) {
 petHorse(horses[2]);
 petHorse(horses[3]);
 
+// Bringing all horses that are inside outside, and vise versa
 for (let i = 0; i < horses.length; i++) {
     horses[i].switchLocation = function () {
         if (this.isInside) {
@@ -296,6 +304,7 @@ for (let i = 0; i < horses.length; i++) {
     };
 }
 
+// Call all horses inside and feed them
 function feedHorses() {
     for (let i = 0; i < horses.length; i++) {
         if (!horses[i].isInside) {
@@ -313,6 +322,7 @@ function feedHorses() {
 }
 feedHorses();
 
+// Move horses out in the morning, and call them back when it's getting dark
 function moveOutside() {
     for (let i = 0; i < horses.length; i++) {
         if (horses[i].isInside) {
