@@ -97,12 +97,12 @@ function Horse(
     this.isInside = isInside;
     this.coatColour = coatColour;
     this.personality = personality;
-    this.introduction = function () {
+    this.introduction = function introduction() {
         console.log(
             `This is ${this.nickname}. They are ${this.age} years old and they are a ${this.personality} horse.`
         );
     };
-    this.brushCoat = function () {
+    this.brushCoat = function brushCoat() {
         console.log(
             `${this.nickname} is just brushed, their ${this.coatColour} coat is all shiny and beautiful.`
         );
@@ -171,7 +171,7 @@ let jade = {
 // Add new horse to stable
 horses.push(jade);
 
-// Add new horse property isHungry
+// Add new horse property isHungry. Horses are hungry by default.
 for (let i = 0; i < horses.length; i++) {
     horses[i].isHungry = true;
 }
