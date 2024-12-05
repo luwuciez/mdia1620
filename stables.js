@@ -107,6 +107,13 @@ function Horse(
             `${this.nickname} is just brushed, their ${this.coatColour} coat is all shiny and beautiful.`
         );
     };
+    this.switchLocation = function switchLocation() {
+        if (this.isInside) {
+            this.isInside = false;
+        } else {
+            this.isInside = true;
+        }
+    };
 }
 
 let ratio = new Horse(
@@ -143,9 +150,7 @@ let topaz = new Horse(
 );
 
 // Add horses to stable
-horses.push(ratio);
-horses.push(aventurine);
-horses.push(topaz);
+horses.push(ratio, aventurine, topaz);
 
 let jade = {
     name: "Bonajade",
@@ -293,16 +298,14 @@ function petHorse(horse) {
 petHorse(horses[2]);
 petHorse(horses[3]);
 
-// Bringing all horses that are inside outside, and vise versa
-for (let i = 0; i < horses.length; i++) {
-    horses[i].switchLocation = function () {
-        if (this.isInside) {
-            this.isInside = false;
-        } else {
-            this.isInside = true;
-        }
-    };
-}
+// Add switchLocation method to 4th horse, since it's created using object literal
+horses[3].switchLocation = function () {
+    if (this.isInside) {
+        this.isInside = false;
+    } else {
+        this.isInside = true;
+    }
+};
 
 // Call all horses inside and feed them
 function feedHorses() {
