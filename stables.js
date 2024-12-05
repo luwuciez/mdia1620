@@ -324,20 +324,20 @@ feedHorses();
 
 // Move horses out in the morning, and call them back when it's getting dark
 function moveOutside() {
+    console.log("Good morning! Bringing all horses out to play. 🌤️");
     for (let i = 0; i < horses.length; i++) {
         if (horses[i].isInside) {
             horses[i].isInside = false;
         }
     }
-    console.log("Good morning! Bringing all horses out to play. 🌤️");
 
     console.log("It's getting dark, calling horses inside...");
-
     for (let i = 0; i < horses.length; i++) {
         if (!horses[i].isInside) {
             horses[i].isInside = true;
         }
     }
+
     console.log("All horses are now inside. Good night! 💤");
 }
 moveOutside();
